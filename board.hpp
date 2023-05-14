@@ -1,5 +1,5 @@
-#ifndef BOARD_H
-#define BOARD_H
+#ifndef BOARD_HPP
+#define BOARD_HPP
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -18,4 +18,4 @@ private:
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };
 
-#endif
+#endif // BOARD_H
