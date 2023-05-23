@@ -2,8 +2,7 @@
 
 sf::Texture PieceTextures::loadTexture(std::string str){
     sf::Texture tmp;
-    if (!tmp.loadFromFile(str))
-        std::cout << "Error loading file\n";
+    if (!tmp.loadFromFile(str)) std::cout << "Error loading file\n";
     return tmp;
 }
 

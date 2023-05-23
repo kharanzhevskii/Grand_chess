@@ -26,6 +26,7 @@ public:
     static sf::Texture whiteArchbishop;
 
     static sf::Texture loadTexture (std::string str);
+    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 };
 
 #endif // PIECE_TEXTURE_HPP
