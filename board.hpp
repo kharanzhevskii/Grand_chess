@@ -26,7 +26,7 @@ private:
 };
 
 
-Board chess(sf::Color(0xf3bc7aff),sf::Color(0xae722bff));
+// Board chess(sf::Color(0xf3bc7aff),sf::Color(0xae722bff));
 
 
 #endif // BOARD_HPP

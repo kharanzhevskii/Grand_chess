@@ -1,5 +1,7 @@
 #include "pawn.hpp"
 
+Board chess(sf::Color(0xf3bc7aff),sf::Color(0xae722bff));
+
 void Pawn::promote_toQueen() {
     if (player && (position / 10 == 2)){
         // Queen queen(player, position, false);
