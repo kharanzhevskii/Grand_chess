@@ -33,3 +33,6 @@
 *.app
 
 build/
+.editorconfig
+.vscode
+file
