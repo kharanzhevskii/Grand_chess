@@ -1,7 +1,5 @@
 #include "pawn.hpp"
 
-Board chess(sf::Color(0xf3bc7aff),sf::Color(0xae722bff));
-
 void Pawn::promote_toQueen() {
     if (player && (position / 10 == 2)){
         // Queen queen(player, position, false);
@@ -22,7 +20,7 @@ void Pawn::setTexture() {
 
 void Pawn::calcDangerMoves() {}
 
-void Pawn::calcPossibleMoves() {
+void Pawn::calcPossibleMoves(Board& chess) {
     if (!player){   //check for black pawn
         if (position / 10 == 2){    //if starter position can move 2 tiles
             if (chess.board_pieces[position+2*10]==NULL or chess.board_pieces[position+2*10]->getPlayer()==player) {    //check if empty or enemy piece

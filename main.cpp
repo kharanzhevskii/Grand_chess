@@ -3,7 +3,7 @@
 #include "pawn.hpp"
 
 int main(){
-    Board chess2(sf::Color(0xf3bc7aff),sf::Color(0xae722bff));
+    Board chess(sf::Color(0xf3bc7aff),sf::Color(0xae722bff));
 
     sf::RenderWindow window(sf::VideoMode(768,640), "Grand_chess", sf::Style::Titlebar | sf::Style::Close);
     // window.setVerticalSyncEnabled(false);
@@ -40,7 +40,7 @@ int main(){
         // sprite.setTextureRect(sf::IntRect(10, 10, 32, 32));
         // sprite.setOrigin(sf::Vector2f(sprite.getTexture()->getSize().x/2 , sprite.getTexture()->getSize().y/2));
         sprite.setScale(sf::Vector2f(0.5f,0.5f));
-        window.draw(chess2);
+        window.draw(chess);
         window.draw(sprite);
         window.display();
 

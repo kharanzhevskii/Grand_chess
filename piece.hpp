@@ -27,9 +27,6 @@ public:
     std::vector<int>& getPossibleMoves() { return possibleMoves; }
     std::vector<int>& getDangerMoves() { return dangerMoves; }
 
-    virtual void calcPossibleMoves() = 0;
-    virtual void calcDangerMoves() = 0;
-
     std::string toString();
 
 protected:
