@@ -29,17 +29,20 @@ public:
 
     std::string toString();
 
+    void draw_func(sf::RenderWindow& window);
+    virtual void setTexture() = 0;
+
 protected:
 
     sf::Sprite sprite;
     std::vector<int> possibleMoves;
-    std::vector<int> dangerMoves; // Moves that endanger opposite king
+    std::vector<int> dangerMoves; // Moves that endanger opposite king NO WAY TO CALCULATE
 
     bool player; // true == White , false == Black for no specific reason
-    int position; // 0-63 board from lt, -1 dead
+    int position; // 0-99 board from lt, -1 dead
     bool moved;
 
-    virtual void setTexture() = 0;
+
     void move();
 
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const

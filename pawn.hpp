@@ -7,15 +7,16 @@
 #include "board.hpp"
 
 
-
 class Pawn : public Piece {
 public:
 
-    Pawn (bool _player = true, int _pos=-1, bool moved=false) : Piece (_player = true, _pos=-1, moved=false) {}
-    virtual void calcPossibleMoves(Board& chess);
-    virtual void calcDangerMoves();
+    Pawn (bool _player = true, int _pos=-1, bool moved=false) : Piece (_player, _pos, moved) {}
+    void calcPossibleMoves(Board& chess);
+    void calcDangerMoves();
     virtual void setTexture() override;
+    void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
     void promote_toQueen();
+
 
 };
 

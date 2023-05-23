@@ -65,3 +65,7 @@ void Piece::move() {
 //     sprite.setOrigin(sf::Vector2f(sprite.getTexture()->getSize().x/2 , sprite.getTexture()->getSize().y/2));
 //     sprite.setScale(sf::Vector2f(0.375f,0.375f));
 // }
+
+void Piece::draw_func(sf::RenderWindow& window){
+    window.draw(sprite);
+}

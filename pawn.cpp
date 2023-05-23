@@ -12,10 +12,10 @@ void Pawn::promote_toQueen() {
 }
 
 void Pawn::setTexture() {
-    sf::Sprite sprite;
     sprite.setTexture(player ? PieceTextures::whitePawn : PieceTextures::blackPawn);
     sprite.setOrigin(sf::Vector2f(sprite.getTexture()->getSize().x/2 , sprite.getTexture()->getSize().y/2));
     sprite.setScale(sf::Vector2f(0.5f, 0.5f));
+    sprite.setPosition(sf::Vector2f((position % 10) * 64.f , (position / 10) * 64.f));
 }
 
 void Pawn::calcDangerMoves() {}
@@ -54,3 +54,6 @@ void Pawn::calcPossibleMoves(Board& chess) {
         }
     }
 }
+
+void Pawn::draw(sf::RenderTarget& target, sf::RenderStates states) const
+    {   target.draw(sprite);    }

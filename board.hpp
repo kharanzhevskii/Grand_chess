@@ -16,12 +16,23 @@ public:
     // loads the sprites of board' rectangles
     void load(sf::Color col1 = sf::Color::White, sf::Color col2 = sf::Color::Black);
 
+    Piece* selectedPiece;
+    std::vector<sf::RectangleShape> possibleMovesSquares;
+
+    bool selectPiece(int pos);
+    bool getSelected(){return selected;}
+    void moveSelected(int pos);
+    void createMovesSquares();
+
 private:
 
     std::array<sf::RectangleShape, 100> boardSquares;    
     // draw class on SFML Window, const for target
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 
+    sf::Font font;
+    bool playerTurn; //w/b move
+    bool selected;  //check if selected a piece
 
 };
 
